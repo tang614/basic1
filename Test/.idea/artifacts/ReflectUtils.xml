@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="ReflectUtils">
-    <output-path>$PROJECT_DIR$/out/artifacts/ReflectUtils</output-path>
-    <root id="archive" name="ReflectUtils.jar">
-      <element id="dir-copy" path="$PROJECT_DIR$/src/com/tang" />
-    </root>
-  </artifact>
-</component>
