@@ -4,6 +4,7 @@ public class SyncTest implements Runnable{
 
     // 共享
     static int i = 0;
+    static Object object = new Object();
 
     //
     public static synchronized void increase(){
@@ -19,6 +20,12 @@ public class SyncTest implements Runnable{
         for (int j = 0; j < 10000; j++) {
             increase();
         }
+
+        /*synchronized(object){
+            for(int j=0;j<1000000;j++){
+                i++;
+            }
+        }*/
     }
 
     public static void main(String[] args) throws Exception{
