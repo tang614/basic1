@@ -1,6 +1,6 @@
 package ThreadLocalTest;
 
-// 多个线程使用ThreadLocal类型的共享变量，解析见笔记.
+// 多个线程使用ThreadLocal类型的共享变量，解析见笔记..
 public class Main {
     static ThreadLocal<String> local = new ThreadLocal<>();
 
