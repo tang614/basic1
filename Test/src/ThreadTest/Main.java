@@ -4,6 +4,7 @@ import java.util.concurrent.CountDownLatch;
 
 public class Main {
     public static void main(String[] args) throws Exception{
+
         //模拟多线程并发执行，如：多个线程在指定时刻进行抢购（秒杀）
         CountDownLatch countDownLatch = new CountDownLatch(1);
         for (int i = 0; i < 5; i++) {
