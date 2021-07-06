@@ -1,4 +1,4 @@
-package proxy;
+package ProxyTest;
 
 public class Student implements Person{
     private String name;

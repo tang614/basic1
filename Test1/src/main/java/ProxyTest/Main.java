@@ -1,4 +1,4 @@
-package proxy;
+package ProxyTest;
 
 import java.lang.reflect.Proxy;
 

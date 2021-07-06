@@ -1,4 +1,4 @@
-package proxy;
+package ProxyTest;
 
 public interface Person {
     void giveMoney();

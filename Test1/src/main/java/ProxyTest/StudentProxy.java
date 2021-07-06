@@ -1,4 +1,4 @@
-package proxy;
+package ProxyTest;
 
 public class StudentProxy implements Person{
     private Student student;

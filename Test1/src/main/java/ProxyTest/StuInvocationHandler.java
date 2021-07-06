@@ -1,6 +1,5 @@
-package proxy;
+package ProxyTest;
 
-import java.lang.annotation.Target;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
