@@ -3,6 +3,8 @@ package LockTest;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
+ * https://blog.csdn.net/qq_39150049/article/details/112798911
+ *
  * lock.lock()使用
  * 获得锁。如果锁不可用，则当前线程将被禁用以进行线程调度，并处于休眠状态，直到获取锁。
  */

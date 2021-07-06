@@ -8,6 +8,9 @@ import java.util.Properties;
 
 public class Main {
     public static void main(String[] args) throws Exception{
+
+        Object o = new Object();
+
         //Calendar使用
         /*// 使用默认时区和语言环境获得一个日历
         Calendar cal = Calendar.getInstance();
@@ -34,11 +37,11 @@ public class Main {
         }};*/
 
         //properties使用
-        Properties pro=new Properties();
+        /*Properties pro=new Properties();
         pro.setProperty("driver", "com.mysql.jdbc.Driver");
         pro.setProperty("url", "jdbc:mysql///user");
         pro.setProperty("user", "root");
-        pro.setProperty("password", "451535");
+        pro.setProperty("password", "451535");*/
         //1.通过字节流的形式
         //store(OutputStream out, String comments)
         //outputStream:字节输出流   comments：配置文件说明
@@ -48,9 +51,6 @@ public class Main {
         //store(Writer writer, String comments)
         //writer:字符输出流   comments：配置文件说明
         //pro.store(new FileWriter("src/jdbc6.properties"),  "数据库配置文件");
-
-
-
 
 
 
