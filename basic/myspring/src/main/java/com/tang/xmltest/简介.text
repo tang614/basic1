@@ -1,0 +1,2 @@
+xmltest是通过xml配置文件来获取beanName和Class,通过反射创建对象，并把beanName和bean存入ioc（beanFactory中的hashMap集合）中,但是不能完成自动装载的
+功能，即没有自定义@Autowired,所以要通过beanFactory.getBean(beanName)的方式获取到bean

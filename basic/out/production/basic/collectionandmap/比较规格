@@ -1,0 +1,7 @@
+如果集合是有序（list、treeset）的，那么排序的规则是怎么样的呢！
+首先元素实现了comparable接口，则加入集合后自动排序。比如String类自动继承了Comparable接口，自己写的person类手动继承接口。
+如果元素没有继承接口，则在创建集合的时候可以加入比较规则。
+
+
+tresSet就是可以排序的，元素本身继承了comparable接口，或者在创建集合的时候加入比较规则（new comparator接口）
+

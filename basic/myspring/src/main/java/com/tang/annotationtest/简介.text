@@ -1,0 +1,3 @@
+annotationtest是通过注解的方式来获取到beanName和Class
+test1中引入了spring依赖，则直接new AnnotationConfigApplicationContext(),获取ioc容器；
+test2中自定义一个ioc容器，模仿spring
