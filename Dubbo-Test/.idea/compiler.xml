@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="dubbo-customer" />
         <module name="dubbo-interface" />
         <module name="dubbo-provider" />
+        <module name="dubbo-customer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

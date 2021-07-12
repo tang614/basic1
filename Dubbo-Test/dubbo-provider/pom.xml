@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tang</groupId>
+    <groupId>com.com.tang</groupId>
     <artifactId>dubbo-provider</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -14,7 +14,6 @@
             <artifactId>dubbo-interface</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
         <!-- 引入dubbo -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -28,6 +27,7 @@
             <artifactId>curator-framework</artifactId>
             <version>2.12.0</version>
         </dependency>
-
     </dependencies>
+
+
 </project>

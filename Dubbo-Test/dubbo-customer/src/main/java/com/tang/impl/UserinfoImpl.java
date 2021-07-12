@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserinfoImpl implements UserInfo {
+public class UserInfoImpl implements UserInfo {
 
     @Autowired
     UserAddress userAddress;
@@ -16,7 +16,6 @@ public class UserinfoImpl implements UserInfo {
     public Info getInfo() {
         Address address = userAddress.getAddress();
         System.out.println(address);
-        Info info = new Info("tom", "10068");
-        return info;
+        return new Info("安徽","13122324419");
     }
 }
