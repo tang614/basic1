@@ -6,26 +6,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-<<<<<<< HEAD:springcloud-test/.idea/compiler.xml
         <module name="service-hi" />
+        <module name="service-ribbon" />
         <module name="eureka-server" />
-=======
-        <module name="dubbo-interface" />
-        <module name="dubbo-provider" />
-        <module name="dubbo-customer" />
->>>>>>> cedcd21e1a3657c22f9c3e4063500e32f3285bd5:Dubbo-Test/.idea/compiler.xml
+        <module name="service-feign" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="eureka-server" target="1.8" />
+      <module name="service-feign" target="1.8" />
       <module name="service-hi" target="1.8" />
+      <module name="service-ribbon" target="1.6" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding utf-8" />
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eureka-server" options="" />
+      <module name="service-feign" options="" />
       <module name="service-hi" options="" />
+      <module name="service-ribbon" options="" />
     </option>
   </component>
 </project>

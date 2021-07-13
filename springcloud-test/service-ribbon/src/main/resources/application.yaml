@@ -3,12 +3,8 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 server:
-  port: 8765
+  port: 8764
 spring:
   application:
-    name: service-feign
-
-
-
-
+    name: service-ribbon
 
