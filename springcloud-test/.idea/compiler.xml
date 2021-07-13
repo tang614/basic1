@@ -6,8 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+<<<<<<< HEAD:springcloud-test/.idea/compiler.xml
         <module name="service-hi" />
         <module name="eureka-server" />
+=======
+        <module name="dubbo-interface" />
+        <module name="dubbo-provider" />
+        <module name="dubbo-customer" />
+>>>>>>> cedcd21e1a3657c22f9c3e4063500e32f3285bd5:Dubbo-Test/.idea/compiler.xml
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

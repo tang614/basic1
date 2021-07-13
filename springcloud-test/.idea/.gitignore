@@ -2,7 +2,11 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
+<<<<<<< HEAD:springcloud-test/.idea/.gitignore
 /dataSources/
+=======
+/../../../../:\IDEAProjects\dubbo-test\.idea/dataSources/
+>>>>>>> cedcd21e1a3657c22f9c3e4063500e32f3285bd5:Dubbo-Test/.idea/.gitignore
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
