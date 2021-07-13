@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a0f7e403-3247-40cb-a864-0204038de14a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-customer/dubbo-customer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-customer/dubbo-customer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-customer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-customer/src/main/java/com/tang/MainApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-customer/src/main/java/com/tang/impl/UserinfoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-customer/src/main/java/com/tang/impl/UserinfoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-customer/target/classes/com/tang/MainApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-customer/target/classes/com/tang/impl/UserinfoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-customer/target/classes/com/tang/impl/UserinfoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-provider/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-provider/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-provider/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-provider/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-provider/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-provider/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-provider/src/main/java/com/tang/MainApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-provider/src/main/java/com/tang/impl/UserAddressImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-provider/src/main/java/com/tang/impl/UserAddressImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-provider/target/classes/com/tang/MainApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dubbo-provider/target/classes/com/tang/impl/UserAddressImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-provider/target/classes/com/tang/impl/UserAddressImpl.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1vDOfzW92lTLpXiZJoBFMJ8zruB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.20344828" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/dubbo-provider/src/main/java/com/tang/impl.java" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEAProjects\dubbo-test\dubbo-customer\src\main\resources" />
+      <recent name="D:\IDEAProjects\dubbo-test\dubbo-provider\src\main\resources" />
+      <recent name="D:\IDEAProjects\dubbo-test\dubbo-interface\src\main\java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.CustomerApplication">
+    <configuration name="CustomerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tang.CustomerApplication" />
+      <module name="dubbo-customer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProviderApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tang.ProviderApplication" />
+      <module name="dubbo-provider" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CustomerApplication" />
+        <item itemvalue="Application.ProviderApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration useDefault="false">C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a0f7e403-3247-40cb-a864-0204038de14a" name="Default Changelist" comment="" />
+      <created>1626093308262</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1626093308262</updated>
+      <workItem from="1626093310977" duration="1022000" />
+      <workItem from="1626094382826" duration="153000" />
+      <workItem from="1626096536167" duration="284000" />
+      <workItem from="1626096860369" duration="2194000" />
+      <workItem from="1626099614927" duration="159000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="249" y="0" key="#Project_Structure" timestamp="1626097364855">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1626097364855" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1626098641373">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1626098641373" />
+    <state x="422" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1626097456331">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="422" y="335" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1626097456331" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1626097871280">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1626097871280" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1626097923389">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1626097923389" />
+    <state width="1493" height="168" key="GridCell.Tab.0.bottom" timestamp="1626099774892">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="168" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1626099774892" />
+    <state width="1493" height="168" key="GridCell.Tab.0.center" timestamp="1626099774892">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="168" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1626099774892" />
+    <state width="1493" height="168" key="GridCell.Tab.0.left" timestamp="1626099774892">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="168" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1626099774892" />
+    <state width="1493" height="168" key="GridCell.Tab.0.right" timestamp="1626099774892">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="168" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1626099774892" />
+    <state x="349" y="155" key="IDE.errors.dialog" timestamp="1626096914221">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="155" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1626096914221" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1626097200375">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1626097200375" />
+    <state x="158" y="94" width="1198" height="679" key="new project wizard" timestamp="1626097183440">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="158" y="94" width="1198" height="679" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1626097183440" />
+  </component>
+</project>
