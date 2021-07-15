@@ -1,0 +1,36 @@
+筛选框面板 年份及报告期  getReportDate
+getKeyIndicators 关键数据近五年
+maven 生命周期及命令
+bug 7039 数据中心反馈数据后已和产品沟通取消bug
+RPC
+安装idea代码审查插件
+es
+es在项目中应用
+
+zookeeper 版本与dubbo-admin 版本对应 问题
+
+本地改完bug 本地测试 测完提到dev 让产品测（dev）环境
+
+升级：提到release后 test测（目前测不了）  产品uat测  test/uat/release用相同的代码
+
+解决 7327 EXCEL 新开发样式 默认进入SHEET2
+
+eureka-server （8761）服务器
+service-hi （8762/8763 小集群）服务提供者
+service-feign （8765）服务消费者（使用伪httpclient进行http请求）,feign 集成了ribbon（客户端负载均衡），集成了hystrix（阻断器）（消费者调用某故障服务时报错，直接切断，不会大量消耗消费者请求线程）
+service-ribbon （8764）服务消费者 使用restTemplate进行http请求，ribbon可进行客户端负载均衡，加入hystrix，可完成阻断器功能
+service-zuul （8769）服务请求的路由器和过滤器
+config-server（8888）配置中心，配置文件放在github/本地，config-client --> config-server --> github
+（高可用配置中心）当很多服务都访问配置中心，可将配置中心服务化，多次开启配置中心服务（集群），访问时可达到负载均衡
+config-client(8773/8772) 端口号来自配置中心文件
+
+properties/yaml 本地  server/client ok 
+
+注意：yaml格式要求高，每行前端的空格要一个一个敲
+
+配置文件名：config-dev、config-test 文件名就包含了profile(环境)
+
+服务启动，加载bootsteap文件，调用配置中心文件，如果配置中心文件内容和本地application.properties文件有属性重合，已配置中心为准
+
+https://github.com/tang614/SpringcloudConfig后加不加.git都可以
+

@@ -1,0 +1,4 @@
+spring:
+  application:
+    #这里名字会被配置中心覆盖
+    name: config-client-1

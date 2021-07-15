@@ -5,8 +5,10 @@ eureka:
 
 server:
   port: 8765
+
 spring:
   application:
+    # profile: test
     name: service-feign
 # feign自带断路器
 feign:
