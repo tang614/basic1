@@ -15,7 +15,7 @@ zookeeper 版本与dubbo-admin 版本对应 问题
 
 解决 7327 EXCEL 新开发样式 默认进入SHEET2
 
-eureka-server （8761）服务器
+eureka-server （8761）服务注册中心
 service-hi （8762/8763 小集群）服务提供者
 service-feign （8765）服务消费者（使用伪httpclient进行http请求）,feign 集成了ribbon（客户端负载均衡），集成了hystrix（阻断器）（消费者调用某故障服务时报错，直接切断，不会大量消耗消费者请求线程）
 service-ribbon （8764）服务消费者 使用restTemplate进行http请求，ribbon可进行客户端负载均衡，加入hystrix，可完成阻断器功能
@@ -23,6 +23,15 @@ service-zuul （8769）服务请求的路由器和过滤器
 config-server（8888）配置中心，配置文件放在github/本地，config-client --> config-server --> github
 （高可用配置中心）当很多服务都访问配置中心，可将配置中心服务化，多次开启配置中心服务（集群），访问时可达到负载均衡
 config-client(8773/8772) 端口号来自配置中心文件
+数据总线（springcloud bus），当配置文件修改后，config-server可以实时获取最新的配置文件内容，但是config-client获取的还是旧数据
+
+使用数据总线
+加入spring-cloud-starter-bus-amqp依赖
+配置文件名
+主类加入@RefreshScope
+
+所有加入bus功能的服务重新读取配置文件：http://localhost:加入bus功能的服务端口号/actuator/bus-refresh 
+指定服务从新读取端口号：?destination=服务名，端口号所在的服务也重新读取
 
 properties/yaml 本地  server/client ok 
 
@@ -33,4 +42,9 @@ properties/yaml 本地  server/client ok
 服务启动，加载bootsteap文件，调用配置中心文件，如果配置中心文件内容和本地application.properties文件有属性重合，已配置中心为准
 
 https://github.com/tang614/SpringcloudConfig后加不加.git都可以
+
+消费者一直监听队列
+自动ack,如果消费异常，队列中没有消息了
+手动ack,手动ack和异常的相对位置
+
 
