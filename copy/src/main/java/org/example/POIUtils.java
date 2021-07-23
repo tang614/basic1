@@ -16,7 +16,7 @@ import java.util.Map;
 public class POIUtils {
 
 
-    private static List<Map<String, Object>> getPicturesFromXSSFSheet(XSSFSheet sheet) {
+    public static List<Map<String, Object>> getPicturesFromXSSFSheet(XSSFSheet sheet) {
         List<Map<String, Object>> result = new ArrayList<>();
         List<POIXMLDocumentPart> list = sheet.getRelations();
         for (POIXMLDocumentPart part : list) {
@@ -39,7 +39,7 @@ public class POIUtils {
         return result;
     }
 
-    private static List<XSSFAnchor> getConnectorFromXSSFSheet(XSSFSheet sheet) {
+    public static List<XSSFAnchor> getConnectorFromXSSFSheet(XSSFSheet sheet) {
         List<XSSFAnchor> result = new ArrayList<>();
         List<POIXMLDocumentPart> list = sheet.getRelations();
         for (POIXMLDocumentPart part : list) {

@@ -48,12 +48,4 @@ public class ServiceRibbonApplication {
         return "hi,"+name+",sorry,error!";
     }
 
-    //@Value("${spring.application.name}")
-    @Value("${age}")
-    String name;
-    @RequestMapping(value = "/name")
-    public String hi(){
-        return name;
-    }
-
 }

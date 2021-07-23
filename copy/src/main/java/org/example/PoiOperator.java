@@ -1,6 +1,7 @@
 package org.example;
 
 import cn.hutool.core.io.IoUtil;
+import org.apache.poi.common.usermodel.HyperlinkType;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -23,13 +24,13 @@ public class PoiOperator {
 
     private static final Logger logger = LoggerFactory.getLogger(PoiOperator.class);
 
-    public void replace(String excelPath, String rootPath) {
+    public void replace(String sourcePath, String descPath) {
         //获取需要替换的excel模板
-        XSSFWorkbook xssfWorkbook = getWorkbook(excelPath);
+        XSSFWorkbook xssfWorkbook = getWorkbook(sourcePath);
         if (Objects.isNull(xssfWorkbook)) {
             return;
         }
-        File rootDirectory = new File(rootPath);
+        File rootDirectory = new File(descPath);
         if (rootDirectory.isDirectory() && Objects.nonNull(rootDirectory.listFiles())) {
             //循环处理文件
             for (File file : rootDirectory.listFiles()) {
@@ -51,6 +52,7 @@ public class PoiOperator {
 
     private void replace(XSSFWorkbook srcWb, File file) {
         try {
+            //----------------------------
             //获取workbook
             XSSFWorkbook descWb = (XSSFWorkbook) WorkbookFactory.create(file);
             //删除原来的"免责申明"
@@ -64,7 +66,7 @@ public class PoiOperator {
             cellStyle.setFont(font);
 
             // 修改字体内容和样式
-            Iterator<Sheet> sheetIterator = descWb.sheetIterator();
+            /*Iterator<Sheet> sheetIterator = descWb.sheetIterator();
             while (sheetIterator.hasNext()){
                 Sheet next = sheetIterator.next();
                 //next.createFreezePane(0, 2, 0, 2);
@@ -72,7 +74,8 @@ public class PoiOperator {
                 Cell cell = next.getRow(0).getCell(0);
                 cell.setCellValue("数据来源：企业预警通");
                 //cell.setCellStyle(cellStyle);
-            }
+            }*/
+            //------------------------------------
 
             //替换
             XSSFSheet srcSheet = srcWb.getSheet("免责声明");
@@ -80,16 +83,48 @@ public class PoiOperator {
 
             XSSFSheet destSheet2 = descWb.createSheet("免责声明");
 
-            destSheet2.setDisplayGridlines(false);//设置不显示网格线
+            //destSheet2.setDisplayGridlines(false);//设置不显示网格线
 
             // copy Sheet
             copySheets(destSheet2, srcSheet, true);
             // copy 图片
             POIUtils.copyPicture(srcSheet, destSheet2, descWb);
-            //copy
+            //copy 分界线
             POIUtils.copyConnector(srcSheet, destSheet2, descWb);
+            //destSheet2.setDisplayGridlines(true);
+            destSheet2.setDisplayGridlines(false);//设置不显示网格线
+            //destSheet2.setPrintGridlines();
+
+            // 遍历前n个sheet，
+            int number = descWb.getNumberOfSheets();
+            for (int i1 = 0; i1 < number - 1; i1++) {
+                XSSFSheet next = descWb.getSheetAt(i1);
+                // 字体格式
+                XSSFCellStyle cellStyle1 = descWb.createCellStyle();
+                XSSFFont font1 = descWb.createFont();//设置字体
+                font1.setFontName("华文细黑");//字体样式
+                font1.setFontHeightInPoints((short) 10);//字体大小
+                cellStyle1.setFont(font1);
+                cellStyle1.setVerticalAlignment(XSSFCellStyle.VERTICAL_CENTER);
+
+                // 修改cell(0,0)
+                Cell cell = next.getRow(0).getCell(0);
+                cell.setCellValue("数据来源：企业预警通");
+                cell.setCellStyle(cellStyle1);
+                // 超链接到本文档的免责sheet
+                XSSFCreationHelper creationHelper = descWb.getCreationHelper();
+                XSSFHyperlink hyperlink = creationHelper.createHyperlink(HyperlinkType.DOCUMENT);
+                hyperlink.setAddress("#免责声明!A1");
+                cell.setHyperlink(hyperlink);
+
+                XSSFCreationHelper creationHelper1 = descWb.getCreationHelper();
+                XSSFHyperlink hyperlink1 = creationHelper1.createHyperlink(HyperlinkType.DOCUMENT);
+                hyperlink1.setAddress("#免责声明!A1");
+                XSSFCell cell1 = next.getRow(0).getCell(1);
+                cell1.setHyperlink(hyperlink1);
+            }
+
             //写入文件
-            //writeToFile(descWb, file.getAbsolutePath() + "_copyed.xlsx");
             writeToFile(descWb, file.getAbsolutePath());
         } catch (Exception e) {
             logger.error("异常", e);
@@ -110,9 +145,22 @@ public class PoiOperator {
                 }
             }
         }
-        for (int i = 0; i <= maxColumnNum; i++) {    //设置列宽
-            destSheet.setColumnWidth(i, srcSheet.getColumnWidth(i));
+
+
+
+
+        for (int j = 0; j <= maxColumnNum; j++) {    //设置列宽
+            destSheet.setColumnWidth(j, srcSheet.getColumnWidth(j));
         }
+
+        // copy合并单元格
+        /*List<CellRangeAddress> list = srcSheet.getMergedRegions();
+        for (int i = 0; i < srcSheet.getNumMergedRegions(); i++) {
+            CellRangeAddress cellRangeAddress = list.get(i);
+            CellRangeAddress cellRangeAddress1 = new CellRangeAddress(cellRangeAddress.getFirstRow(), cellRangeAddress.getLastRow(),
+                    cellRangeAddress.getFirstColumn(), cellRangeAddress.getLastColumn());
+            destSheet.addMergedRegion(cellRangeAddress1);
+        }*/
     }
 
     /**
@@ -130,8 +178,7 @@ public class PoiOperator {
                     newCell = destRow.createCell(j);
                 }
                 copyCell(oldCell, newCell, styleMap);
-                CellRangeAddress mergedRegion = getMergedRegion(srcSheet,
-                        srcRow.getRowNum(), (short) oldCell.getColumnIndex());
+                CellRangeAddress mergedRegion = getMergedRegion(srcSheet, srcRow.getRowNum(), (short) oldCell.getColumnIndex());
                 if (mergedRegion != null) {
                     CellRangeAddress newMergedRegion = new CellRangeAddress(
                             mergedRegion.getFirstRow() + deltaRows,
@@ -145,11 +192,14 @@ public class PoiOperator {
                         } catch (Exception e) {
                             logger.error("异常", e);
                         }
-
                     }
                 }
+
+
+                }
             }
-        }
+
+
     }
 
 

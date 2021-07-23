@@ -10,6 +10,10 @@
     <file url="file://$PROJECT_DIR$/service-feign/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-hi/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-ribbon/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-zipkin-hello/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-zipkin-hello/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-zipkin-hi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-zipkin-hi/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-zuul/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

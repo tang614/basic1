@@ -25,9 +25,16 @@ config-server（8888）配置中心，配置文件放在github/本地，config-c
 config-client(8773/8772) 端口号来自配置中心文件
 数据总线（springcloud bus），当配置文件修改后，config-server可以实时获取最新的配置文件内容，但是config-client获取的还是旧数据
 
+服务追踪是否需要开启eureka-server
+zipkin 追踪服务之间的调用，java -jar zipkin-server-2.10.1-exec.jar , http://localhost:9411/
+使用feign和ribbon不需要加入start-web依赖，但zipkin demo中却需要加
+服务注册中心的高可用 多个注册中心相互注册，现有A、B、C三个注册中心，A作为服务注册到BC中，如果有服务注册到A中，则自动注册到BC中，同理，B也要作为服务注册到AC中
+
+断路器监测
+
 使用数据总线
 加入spring-cloud-starter-bus-amqp依赖
-配置文件名
+配置文件
 主类加入@RefreshScope
 
 所有加入bus功能的服务重新读取配置文件：http://localhost:加入bus功能的服务端口号/actuator/bus-refresh 
@@ -39,7 +46,7 @@ properties/yaml 本地  server/client ok
 
 配置文件名：config-dev、config-test 文件名就包含了profile(环境)
 
-服务启动，加载bootsteap文件，调用配置中心文件，如果配置中心文件内容和本地application.properties文件有属性重合，已配置中心为准
+服务启动，加载bootstrap文件，调用配置中心文件，如果配置中心文件内容和本地application.properties文件有属性重合，已配置中心为准
 
 https://github.com/tang614/SpringcloudConfig后加不加.git都可以
 
@@ -47,4 +54,29 @@ https://github.com/tang614/SpringcloudConfig后加不加.git都可以
 自动ack,如果消费异常，队列中没有消息了
 手动ack,手动ack和异常的相对位置
 
+健康监测依赖有什么用？
+@RefreshScope和restTemplate循环依赖
 
+
+poi
+合并单元格后，单元格位置为第一个单元格，操作后面的单元格无效果；
+row.getFirstCellNum为第一个单元格的索引（从零开始）row.getLastCellNum为最后一个单元格的列号（从1开始）
+操作单元格后 才能在poi中取到该单元格，写入值删除不算操作，合并单元格算操作‘
+
+<dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Edgware.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+        </dependencies>
+
+改模块名称
+
+
+dev 模板在本地 
+release 模板在svn 

@@ -9,10 +9,12 @@
         <module name="config-server" />
         <module name="service-ribbon" />
         <module name="service-zuul" />
+        <module name="service-zipkin-hi" />
         <module name="config-client" />
         <module name="service-hi" />
         <module name="eureka-server" />
         <module name="service-feign" />
+        <module name="service-zipkin-hello" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +24,8 @@
       <module name="service-feign" target="1.8" />
       <module name="service-hi" target="1.8" />
       <module name="service-ribbon" target="1.6" />
+      <module name="service-zipkin-hello" target="1.8" />
+      <module name="service-zipkin-hi" target="1.8" />
       <module name="service-zuul" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -34,6 +38,8 @@
       <module name="service-feign" options="" />
       <module name="service-hi" options="" />
       <module name="service-ribbon" options="" />
+      <module name="service-zipkin-hello" options="-parameters" />
+      <module name="service-zipkin-hi" options="-parameters" />
       <module name="service-zuul" options="" />
     </option>
   </component>

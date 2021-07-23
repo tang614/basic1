@@ -23,5 +23,6 @@
     <orderEntry type="library" name="Maven: stax:stax-api:1.0.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.virtuald:curvesapi:1.04" level="project" />
     <orderEntry type="library" name="Maven: cn.hutool:hutool-all:5.7.3" level="project" />
+    <orderEntry type="library" name="Maven: e-iceblue:spire.xls:4.6.5" level="project" />
   </component>
 </module>

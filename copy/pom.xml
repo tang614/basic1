@@ -72,7 +72,22 @@
             <artifactId>hutool-all</artifactId>
             <version>5.7.3</version>
         </dependency>
+
+        <dependency>
+            <groupId>e-iceblue</groupId>
+            <artifactId>spire.xls</artifactId>
+            <version>4.6.5</version>
+            <!--<type>pom</type>-->
+        </dependency>
+
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>com.e-iceblue</id>
+            <url>http://repo.e-iceblue.cn/repository/maven-public/</url>
+        </repository>
+    </repositories>
 
     <build>
 

@@ -1,0 +1,10 @@
+eureka:
+  instance:
+    hostname: pee2
+  client:
+    serviceUrl:
+      defaultZone: http://pee1:8761/eureka/
+    fetch-registry: false
+    register-with-eureka: false
+server:
+  port: 8771
